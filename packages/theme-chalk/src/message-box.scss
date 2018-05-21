@@ -6,7 +6,8 @@
 
 @include b(message-box) {
   display: inline-block;
-  width: $--msgbox-width;
+  // width: $--msgbox-width;
+  min-width: 250px;       // add new
   padding-bottom: 10px;
   vertical-align: middle;
   background-color: $--color-white;

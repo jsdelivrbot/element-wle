@@ -1,15 +1,60 @@
 ## Changelog
 
+### 2.4.0 Fullerene
+
+*2018-05-28*
+
+#### Nuevas características
+- Generalidades
+  - La herramienta de desarrollo y el empaquetador se cambiaron a webpack nativo, #11216
+  - Ahora puede configurar globalmente el z-index inicial de los popups, #11257
+- Autocomplete
+  - Añadido el atributo `hide-loading`, #11260
+- Button
+  - Ahora se puede usar el atributo `size` en los botones circulares para controlar sus tamaños, #11275
+- InputNumber
+  - Añadido el atributo `precision`, #11281
+- Tabs
+  - Añadido el atributo `before-leave`, #11259
+  - Añadido el atributo `lazy`, #11167（by @Kingwl）
+- Table
+  - Añadido el método `sort` para ordenar manualmente la tabla, #11311
+
+#### Corrección de errores
+- Input
+  - Se ha corregido un problema que provocaba que se volviera a procesar al utilizar el IME chino para introducir texto rápidamente, #11235 (por @STLighter).
+- Popover
+  - Corregido el error de la consola cuando el elemento disparador es Radio o Checkbox, #11265
+- Breadcrumb
+  - Arreglado el atributo `to` que no soportaba la actualización dinámica, #11286
+- Upload
+  - Corregido el error de la consola cuando se resolvia el Archivo en la Promesa devuelta del método `beforeUpload`, #11297 (por @qusiba)
+- Tooltip
+  - Solucionado que la flecha no se  posicionaba correctamente cuando el contenido estaba vacío, #11335
+- Autocompletar
+  - Corregido que  las sugerencias de entrada eran  incorrectas después de eliminar la palabra clave rápidamente, #11323
+- ColorPicker
+  - Corregido el evento `active-change` que se disparaba incorrectamente cuando el menú desplegable del picker estaba cerrado, #11304
+- Table
+  - Corregido el error de estilo del panel de filtro cuando se sobredimensionaba, #11314
+  - Corregida que la fila seleccionada actualmente no se retenia cuando se ordenaba la tabla, #11348
+- CheckBox
+  - Arreglado que cuando el checkbox era único no soportaba validación, #11271
+- Radio
+  - Arreglado que el Radio desactivado seguia estando seleccionada cuando se pulsaba la tecla espaciadora, #11303
+- MessageBox
+  - Corregida la clase `el-popup-parent--hidden` que no se eliminaba al abrir MessageBox sucesivamente, #11371
+
 ### 2.3.9
 
 *2018-05-18*
 
-- Fixed when the source data does not have the field specified by a TableColumn's `prop` attribute, an error would occur when the mouse moves into that column's cells, #11137
-- The `lockScroll` attribute of pop up components no longer adds an inline style to the parent element, but instead adds a class name, #11114
-- Fixed the icon of Progress not displaying when its `status` is exception, #11172
-- Fixed options' `disabled` attribute not working in filterable Cascader's filter result list, #11185
-- Fixed an issue where Table's expanded row cannot be collapsed if the data source is updated after its expansion, #11186
-- `setCurrentKey` of Tree now accepts `null` as its param to cancel the currently highlighted node, #11205
+- Corregido que cuando los datos de origen no tenian el campo especificado por el atributo `prop` de una TableColumn, se producía un error al moverse el ratón dentro de las celdas de esa columna, #11137.
+- El atributo `lockScroll` de los componentes pop-up ya no añade un inline style al elemento padre, sino que añade un nombre de clase, #1111114.
+- Arreglado el icono de Progreso que no se mostraba cuando su `status` era `exception`, #11172
+- El atributo `disabled` no funcionaba en la lista de resultados del filtro de Cascader, #11185
+- Se ha corregido un problema por el que la fila expandida de la Tabla no se podía contraer si los datos de origen se actualizaban después de su expansión, #11186.
+- `setCurrentKey` de Tree ahora acepta `null` como parámetro para cancelar el nodo actualmente resaltado, #11205
 
 ### 2.3.8
 

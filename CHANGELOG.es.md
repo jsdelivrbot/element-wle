@@ -1,5 +1,22 @@
 ## Changelog
 
+### 2.4.1
+
+*2018-06-08*
+
+- Removida la declaración duplicada de type en Autocompletar, #11388
+- Corregido el estilo de flecha en el dropdown de Select en FireFox cuando se anidaba en el formulario, #11427
+- Corregido que el ícono `clear` de Select seguia apareciendo cuando el valor inicial era `null`, #11460
+- Arreglado que cuando el radio estaba `disabled` mostraba el box-shadow al hacer click, #11462
+- Añadido el atributo `iconClass` para MessageBox, #11499
+- Añadido el atributo `stretch` para Tabs, #11476
+- Arreglado el problema de orden de renderizado de TabPane cuando Tabs es `lazy`, #11461
+- Arreglado que Table no retenia la fila actual de resaltados cuando se expandia, #11464
+- Arreglado que  focusing state cuando `before-leave` devolvia una promesa resuelta, #11386
+- Arreglado que Popover deshabilitado seguia creando poppers, #11426
+- Arreglado el bucle sin fin de Tree cuando se añadia un nuevo nodo en modo `lazy`, #11430 (por @wangjingf)
+- Añadido el evento `closed` para Dialog, #11490
+
 ### 2.4.0 Fullerene
 
 *2018-05-28*

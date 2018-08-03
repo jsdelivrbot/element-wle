@@ -20,11 +20,13 @@
         @focus="handleFocus"
         @blur="focusing = false"
       >
-        <i
-          v-show="!noclickTitle"
-          class="el-collapse-item__arrow el-icon-arrow-right"
-          :class="{'is-active': isActive}">
-        </i>
+        <span class="right-text">
+          <slot name="text"></slot>
+          <i
+            class="el-collapse-item__arrow el-icon-arrow-right"
+            :class="{'is-active': isActive}">
+          </i>
+        </span>
         <slot name="title">{{title}}</slot>
       </div>
     </div>

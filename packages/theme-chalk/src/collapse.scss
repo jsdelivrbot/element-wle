@@ -19,14 +19,10 @@
     transition: border-bottom-color .3s;
     outline: none;
 
-    .right-text { // NEW 右侧文字添加
-      float: right;
-    }
-
     @include e(arrow) {
       margin-right: 8px;
       transition: transform .3s;
-      // float: right;
+      float: right;
       line-height: 48px;
       font-weight: 300;
       @include when(active) {

@@ -4,6 +4,11 @@
 @import "tooltip";
 @import "common/var";
 
+// NEW 十字样式处理
+.el-table td.cross-on {
+  background-color: #f4f7fd
+}
+
 @include b(table) {
   position: relative;
   overflow: hidden;
@@ -486,7 +491,7 @@
     & .el-table__body {
       & tr.el-table__row--striped {
         td {
-          background: #FAFAFA;
+          background: #FAFAFB;  // NEW 修改
         }
 
         &.current-row td {

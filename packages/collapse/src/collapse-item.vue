@@ -21,6 +21,7 @@
         @blur="focusing = false"
       >
         <i
+          v-show="!noclickTitle"
           class="el-collapse-item__arrow el-icon-arrow-right"
           :class="{'is-active': isActive}">
         </i>
@@ -72,6 +73,7 @@
     inject: ['collapse'],
 
     props: {
+      noclickTitle: Boolean, // NEW 添加禁用Title点击事件
       title: String,
       name: {
         type: [String, Number],
@@ -101,11 +103,13 @@
         }, 50);
       },
       handleHeaderClick() {
+        if (this.noclickTitle) return;
         this.dispatch('ElCollapse', 'item-click', this);
         this.focusing = false;
         this.isClick = true;
       },
       handleEnterClick() {
+        if (this.noclickTitle) return;
         this.dispatch('ElCollapse', 'item-click', this);
       }
     }

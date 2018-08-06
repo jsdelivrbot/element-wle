@@ -78,6 +78,7 @@
         :style="{
           width: layout.bodyWidth ? layout.bodyWidth + 'px' : ''
         }">
+        <slot name="counter"></slot>
       </table-footer>
     </div>
     <div
@@ -140,7 +141,9 @@
           :store="store"
           :style="{
             width: bodyWidth
-          }"></table-footer>
+          }">
+          <slot name="counter"></slot>
+        </table-footer>
       </div>
     </div>
     <div
@@ -197,7 +200,9 @@
           :store="store"
           :style="{
             width: bodyWidth
-          }"></table-footer>
+          }">
+          <slot name="counter"></slot>
+        </table-footer>
       </div>
     </div>
     <div

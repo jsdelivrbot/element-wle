@@ -393,6 +393,7 @@
 ```html
   <template>
     <el-table
+      show-summary
       cross-on
       :data="tableData"
       style="width: 100%">
@@ -410,6 +411,19 @@
         prop="address"
         label="地址">
       </el-table-column>
+      <template slot="counter">
+        <tr>
+          <td colspan="1" rowspan="1">
+            <div class="cell">合计</div>
+          </td>
+          <td colspan="1" rowspan="1">
+            <div class="cell">123</div>
+          </td>
+          <td colspan="1" rowspan="1">
+            <div class="cell"></div>
+          </td>
+        </tr>
+      </template>
     </el-table>
   </template>
 

@@ -338,11 +338,11 @@
     methods: {
       updateCrossOn(indexs, state) { // NEW 更新 cross-on样式
         if (this.crossOn) {
-          let {$index, cellIndex} = indexs;
-          let rows = this.$el.querySelectorAll(`[class*=row${$index}]`);
+          // let rows = this.$el.querySelectorAll(`[class*=row${$index}]`);
+          let {cellIndex} = indexs;
           let cols = this.$el.querySelectorAll(`[class*=col${cellIndex}]`);
-          if (rows.length) classStyle(rows, state);
           if (cols.length) classStyle(cols, state);
+          // if (rows.length) classStyle(rows, state);
         }
       },
 
